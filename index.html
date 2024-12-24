@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل كورس اللغة العربية</title>
+    <style>
+        /* إعدادات الخطوط والألوان */
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(to bottom, #e3f2fd, #bbdefb); /* خلفية باردة */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        h1, h2 {
+            color: #000;
+            margin: 0;
+        }
+
+        /* تأثير المطر */
+        .rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .raindrop {
+            position: absolute;
+            top: -10px;
+            width: 2px;
+            height: 15px;
+            background: rgba(0, 0, 255, 0.6);
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        /* تصميم رأس الصفحة */
+        .header {
+            background-color: #1565c0;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 50px;
+            z-index: 2;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #ffffff;
+        }
+
+        .header h2 {
+            font-size: 18px;
+            background-color: #0277bd;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+            color: #fff;
+        }
+
+        /* تصميم النموذج */
+        .container {
+            background-color: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        input, select, textarea, button {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 2px solid #0277bd;
+            border-radius: 8px;
+            background-color: #f1f1f1;
+            box-sizing: border-box;
+        }
+
+        select {
+            background-color: #0277bd;
+            color: #fff;
+            border: 2px solid #0277bd;
+        }
+
+        button {
+            background-color: #1565c0;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        button:hover {
+            background-color: #039be5;
+        }
+
+        /* تصميم الشريط الخاص بالخصم */
+        .discount-banner {
+            background-color: #d32f2f;
+            color: #fff;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 3;
+        }
+
+        /* تصميم مربع في منتصف الصفحة */
+        .middle-box {
+            background-color: #0277bd;
+            color: white;
+            font-size: 20px;
+            padding: 15px;
+            margin: 40px auto;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            z-index: 2;
+        }
+
+        /* تعديل الفوتر */
+        .footer {
+            margin-top: 50px;
+            padding: 10px;
+            background-color: transparent;
+            color: #333;
+        }
+
+        /* عبارة تطوير */
+        .developer {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            color: #333;
+            font-size: 14px;
+        }
+
+        /* تغيير اللون الخاص بنص "سجل الآن في كورس اللغة العربية" */
+        .register-text {
+            color: #ff7043; /* اللون البرتقالي الفاتح */
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- تأثير المطر -->
+    <div class="rain" id="rain"></div>
+
+    <!-- شريط الخصم -->
+    <div class="discount-banner">
+        🎅 خصم 30% عند إضافة 5 من أصدقائك! 🎉
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="container">
+        <div class="header">
+            <h1>🎄 مركز اللغة العربية 🎄</h1>
+            <h2>بإشراف مستر محمد عبدالوهاب</h2>
+        </div>
+        
+        <!-- تغيير لون النص هنا -->
+        <h1 class="register-text">🎁 سجل الآن في كورس اللغة العربية 🎁</h1>
+
+        <form action="https://wa.me/201154773221" method="get">
+            <input type="text" name="name" placeholder="الاسم الثلاثي" required>
+            <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+            <select name="stage" required>
+                <option value="" disabled selected>اختر المرحلة الدراسية</option>
+                <option value="ثانوي - أولى">ثانوي - سنة أولى</option>
+                <option value="ثانوي - ثانية">ثانوي - سنة ثانية</option>
+                <option value="ثانوي - ثالثة">ثانوي - سنة ثالثة</option>
+            </select>
+            <input type="tel" name="guardian_phone" placeholder="رقم ولي الأمر" required>
+            <textarea name="friends" placeholder="أدخل أرقام أصدقائك (5 أرقام مفصولة بفواصل)" rows="3"></textarea>
+            <input type="text" name="area" placeholder="المنطقة" required>
+            <button type="submit">🎅 سجل الآن عبر واتساب 🎅</button>
+        </form>
+    </div>
+
+    <!-- عبارة تطوير -->
+    <p class="developer">تطوير: Lime Glitch</p>
+
+    <!-- الموسيقى -->
+    <audio autoplay loop>
+        <source src="https://archive.org/download/holiday-snowfall/holiday-snowfall.mp3" type="audio/mp3">
+        متصفحك لا يدعم تشغيل الصوت.
+    </audio>
+
+    <script>
+        // كود تساقط المطر
+        const rainContainer = document.getElementById('rain');
+        for (let i = 0; i < 200; i++) {
+            const raindrop = document.createElement('div');
+            raindrop.classList.add('raindrop');
+            raindrop.style.left = Math.random() * 100 + 'vw';
+            raindrop.style.animationDuration = Math.random() * 5 + 3 + 's';
+            raindrop.style.animationDelay = Math.random() * 5 + 's';
+            rainContainer.appendChild(raindrop);
+        }
+    </script>
+
+</body>
+</html>
